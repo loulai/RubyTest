@@ -126,12 +126,14 @@ end
 # [1, 3, 5, 4, 1, 2, 6, 2, 1, 3, 7]
 # becomes [1, 3, 5, 4, 1, 2]
 def get_elements_until_greater_than_five(array)
+	numbers_greater_than_five = array.take_while {|i| i < 6}
 end
 
 # turn an array (with an even number of elements) into a hash, by
 # pairing up elements. e.g. ['a', 'b', 'c', 'd'] becomes
 # {'a' => 'b', 'c' => 'd'}
 def convert_array_to_a_hash(array)
+
 end
 
 # get all the letters used in an array of words and return
@@ -156,6 +158,9 @@ end
 # take out all the capital letters from a string
 # so 'Hello JohnDoe' becomes 'ello ohnoe'
 def remove_capital_letters_from_string(string)
+	capital_alphabet = [*"A".."Z"]
+	lowercase_chars = string.chars.reject {|char| capital_alphabet.include? char}
+	lowercase_chars.join
 end
 
 # round up a float up and convert it to an Integer,
