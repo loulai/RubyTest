@@ -126,7 +126,7 @@ describe 'the Friday test :)' do
     expect(n).to eq ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
   end
 
-  specify 'swap_keys_and_values_in_a_hash' do
+  fit 'swap_keys_and_values_in_a_hash' do
     n = swap_keys_and_values_in_a_hash({'a' => 'b', 'c' => 'd'})
     expect(n).to eq({'b' => 'a', 'd' => 'c'})
   end
@@ -216,7 +216,7 @@ describe 'the Friday test :)' do
     expect(n).to eq 2016
   end
 
-  specify 'count_words_of_each_length_in_a_file' do
+  fit 'count_words_of_each_length_in_a_file' do
     n = count_words_of_each_length_in_a_file('lorem.txt') || []
     expect(Hash[n.sort]).to eq({1=>1, 2=>5, 3=>7, 4=>12, 5=>14, 6=>4, 7=>8, 8=>6, 9=>6, 10=>2, 11=>2, 12=>3}) 
   end
