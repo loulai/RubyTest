@@ -33,7 +33,7 @@ describe 'the Friday test :)' do
     expect(n).to eq ['god', 'yeknom', 'tnahpele']
   end
 
-  it 'every_possible_pairing_of_students' do
+  fit 'every_possible_pairing_of_students' do
     n = every_possible_pairing_of_students(['Bob', 'Dave', 'Clive']) || []
     sorted = n.map {|pair| pair.sort}.sort_by {|pair| [pair.first, pair.last] }
 
@@ -116,7 +116,7 @@ describe 'the Friday test :)' do
     expect(n).to eq [1, 3, 5, 4, 1, 2]
   end
 
-  specify 'convert_array_to_a_hash' do
+  fit 'convert_array_to_a_hash' do
     n = convert_array_to_a_hash ['a', 'b', 'c', 'd']
     expect(n).to eq({'a' => 'b', 'c' => 'd'})
   end
