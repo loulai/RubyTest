@@ -71,6 +71,8 @@ end
 # even numbers come first
 # so [1, 2, 3, 4, 5, 6] becomes [[2, 4, 6], [1, 3, 5]]
 def separate_array_into_even_and_odd_numbers(array)
+	separated_hash = array.group_by {|i| i % 2}
+	[separated_hash[0], separated_hash[1]]
 end
 
 # count the numbers of elements in an element which are palindromes
