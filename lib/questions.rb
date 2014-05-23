@@ -55,6 +55,9 @@ end
 # 'banana' becomes 'ban'. If the string is an odd number of letters
 # round up - so 'apple' becomes 'app'
 def get_first_half_of_string(string)
+	number_of_characters_in_string = string.chars.count
+	half_num = (number_of_characters_in_string/2.0).ceil
+	string.slice(0, half_num)
 end
 
 # turn a positive integer into a negative integer. A negative integer
