@@ -1,6 +1,6 @@
 # keep only the elements that start with an a
 def select_elements_starting_with_a(array)
-	array.select {|elem| elem.chars.first == "a"}
+	array.select {|elem| elem.start_with? "a"}
 end
 
 # keep only the elements that start with a vowel
@@ -262,6 +262,22 @@ end
 # the list of bank holidays is here:
 # https://www.gov.uk/bank-holidays
 def is_a_2014_bank_holiday?(date)
+	if bank_holidays.include? date
+		true
+	else
+		false
+	end
+end
+
+def bank_holidays
+	[Time.new(2014, 1, 1), 
+		Time.new(2014, 4, 18), 
+		Time.new(2014, 4, 21), 
+		Time.new(2014, 5, 5),
+		Time.new(2014, 5, 26),
+		Time.new(2014, 8, 25),
+		Time.new(2014, 12, 25),
+		Time.new(2014, 12, 26)]
 end
 
 # given your birthday this year, this method tells you
