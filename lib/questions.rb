@@ -141,6 +141,8 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+	words_to_chars = array.map {|word| word.chars }
+	words_to_chars.flatten.uniq.sort
 end
 
 # swap the keys and values in a hash. e.g.
@@ -153,6 +155,10 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
+	keys = hash.keys
+	values = hash.values
+	grand_array = keys + values 
+	grand_array.inject(:+)
 end
 
 # take out all the capital letters from a string
@@ -166,11 +172,13 @@ end
 # round up a float up and convert it to an Integer,
 # so 3.214 becomes 4
 def round_up_number(float)
+	float.ceil.round
 end
 
 # round down a float up and convert it to an Integer,
 # so 9.52 becomes 9
 def round_down_number(float)
+	float.floor.round
 end
 
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
